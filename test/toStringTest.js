@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import toString from "../src/toString.js";
-describe("Capitalize", () => {
+describe("toString", () => {
   it("should return string for string", () => {
     expect(toString("foo")).to.equal("foo");
   });
