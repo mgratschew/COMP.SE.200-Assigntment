@@ -17,4 +17,7 @@ describe("Words", () => {
     it("should recognize special letters", () => {
         expect(words('ö, ä, ñ, ü')).to.eql(['ö', 'ä', 'ñ', 'ü']);
     });
+    it("returns array for string with a pattern", () => {
+        expect(words('fred, barney, & pebbles', /[^, ]+/g)).to.eql(['fred', 'barney', '&', 'pebbles']);
+    });
 });

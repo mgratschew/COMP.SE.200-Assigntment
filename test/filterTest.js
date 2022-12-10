@@ -23,4 +23,7 @@ describe("Filter", () => {
     it("should return empty array if predicate doesn't match", function () {
         expect(filter(users, ({passive}) => passive)).to.eql([[]]);
     });
+    it("should return empty array with no array", function () {
+        expect(filter(null, ({ active }) => active)).to.eql([[]]);
+    });
 });
