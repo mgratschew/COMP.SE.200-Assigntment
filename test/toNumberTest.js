@@ -16,6 +16,10 @@ describe("toNumber", () => {
     it("input is object, returns number", () => {
         expect(toNumber(num)).to.eql(3.2);
     });
+    const temp = {value: 3.2};
+    it("input is own made object, returns NaN", () => {
+        expect(toNumber(temp)).to.eql(NaN);
+    });
     it("no input, returns NaN", () => {
         expect(toNumber()).to.eql(NaN);
     });
@@ -48,5 +52,8 @@ describe("toNumber", () => {
     });
     it("input is Infinity, returns Infinity", () => {
         expect(toNumber(Infinity)).to.eql(Infinity);
+    });
+    it("input is bad hex", () => {
+        expect(toNumber('0xkek')).to.eql(NAN);
     });
 });

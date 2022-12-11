@@ -23,4 +23,7 @@ describe("Words", () => {
     it("returns empty array for no input", () => {
         expect(words()).to.eql([]);
     });
+    it("returns empty array for empty string with a pattern", () => {
+        expect(words('', /[^, ]+/g)).to.eql([]);
+    });
 });
