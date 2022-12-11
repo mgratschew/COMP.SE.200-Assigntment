@@ -11,7 +11,7 @@ describe("Words", () => {
     it("should recognize numbers as words", () => {
         expect(words('0, 15, 314')).to.eql(['0', '15', '314']);
     });
-    it("should recognize alphanumeric characters as words with a pattern", () => {
+    it("should recognize alphanumeric characters as words", () => {
         expect(words('&, %, ¤')).to.eql(['&', '%', '¤']);
     });
     it("should recognize special letters", () => {
@@ -19,5 +19,8 @@ describe("Words", () => {
     });
     it("returns array for string with a pattern", () => {
         expect(words('fred, barney, & pebbles', /[^, ]+/g)).to.eql(['fred', 'barney', '&', 'pebbles']);
+    });
+    it("returns empty array for no input", () => {
+        expect(words()).to.eql([]);
     });
 });

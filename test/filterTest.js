@@ -24,6 +24,6 @@ describe("Filter", () => {
         expect(filter(users, ({passive}) => passive)).to.eql([[]]);
     });
     it("should return empty array with no array", function () {
-        expect(filter(null, ({ active }) => active)).to.eql([[]]);
+        expect(filter()).to.eql([[]]);
     });
 });
