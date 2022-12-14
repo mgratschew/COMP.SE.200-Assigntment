@@ -6,10 +6,10 @@ describe("Clamp", () => {
         expect(clamp(1, 0, 2)).to.equal(1);
     });
     it("returns lower bound when given number is equal or less than lower bound", () => {
-        expect(clamp(Number.MIN_VALUE, -3, 2)).to.equal(-3);
+        expect(clamp(-3, 1, 2)).to.equal(1);
     });
     it("returns upper bound when given number is equal or greater than upper bound", () => {
-        expect(clamp(Number.MAX_VALUE, 0, 2)).to.equal(2);
+        expect(clamp(3, 0, 2)).to.equal(2);
     });
     it("returns NaN when lower bound is greater than upperbound", () => {
         expect(clamp(-10, 5, 2)).to.equal(NaN);
