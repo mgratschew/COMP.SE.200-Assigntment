@@ -54,6 +54,6 @@ describe("toNumber", () => {
         expect(toNumber(Infinity)).to.eql(Infinity);
     });
     it("input is bad hex", () => {
-        expect(toNumber('0xkek')).to.eql(NAN);
+        expect(toNumber('0xkek')).to.eql(NaN);
     });
 });
