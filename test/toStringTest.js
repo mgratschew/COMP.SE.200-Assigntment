@@ -17,4 +17,7 @@ describe("toString", () => {
   it("should return string for a Symbol type", () => {
     expect(toString(sym)).to.equal("Symbol(foo)");
   });
+  it("should return empty string for null array", () => {
+    expect(toString([null])).to.equal("");
+  });
 });
